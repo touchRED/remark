@@ -11,6 +11,7 @@ let creatingIsland = false;
 let creatingGate = false;
 
 let logging = true;
+let displayLogger = true;
 let logger;
 
 function Controls(){
@@ -193,14 +194,23 @@ function keyPressed(){
     case 76:
       if(logging){
         logging = false;
-        logger.hide();
+        // logger.hide();
       }else{
         logging = true;
+        // logger.show();
+      }
+      break;
+    case 73:
+      if(displayLogger){
+        displayLogger = false;
+        logger.hide();
+      }else{
+        displayLogger = true;
         logger.show();
       }
       break;
     default:
-      // console.log(keyCode);
+      console.log(keyCode);
       break;
   }
 }

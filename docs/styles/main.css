@@ -81,3 +81,16 @@ body{
 #logger p{
   margin-bottom: 10px;
 }
+
+#shortcuts{
+  font-family: "Courier New", monospace;
+  position: absolute;
+  text-align: right;
+  right: 10px;
+  bottom: 10px;
+}
+
+#shortcuts p{
+  margin-top: 10px;
+  color: #999;
+}
