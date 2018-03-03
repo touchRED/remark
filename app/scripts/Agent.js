@@ -40,7 +40,7 @@ Agent.prototype.update = function(){
           }
           //if so, change their version of the word to our version
           if(included){
-            if(this.vocabulary[randomIndex].content == a.vocabulary[wordIndex].content && random() < 0.01){
+            if(this.vocabulary[randomIndex].content == a.vocabulary[wordIndex].content && random() < 0.03){
               let orig = this.vocabulary[randomIndex].content;
               this.vocabulary[randomIndex].mutate();
               a.vocabulary[wordIndex] = this.vocabulary[randomIndex];

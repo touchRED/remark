@@ -26,7 +26,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 body {
   line-height: 1;
-  color: black;
+  /* color: black; */
   background: white;
 }
 ol, ul {
@@ -49,6 +49,18 @@ blockquote, q {
   quotes: "" "";
 }
 
+@font-face{
+  font-family: "Futura";
+  src: url("Futura.ttf"),
+      url("FuturaMedium.ttf");
+}
+
+@font-face{
+  font-family: "Source Sans Pro";
+  src: url("SourceSansPro-Light.ttf"),
+      url("SourceSansPro-Regular.ttf");
+}
+
 /* ==========================================================================
    Styles
    ========================================================================== */
@@ -67,30 +79,33 @@ body{
   z-index: 1;
   width: 600px;
   height: 180px;
-  bottom: 12px;
-  left: 12px;
+  bottom: 15px;
+  left: 15px;
   background: transparent;
   border: 1px solid rgb(220,220,220);
   border-radius: 5px;
   overflow-x: scroll;
   overflow-y: scroll;
   padding: 10px;
-  font-family: "Courier New";
 }
 
 #logger p{
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
   margin-bottom: 10px;
 }
 
 #shortcuts{
-  font-family: "Courier New", monospace;
   position: absolute;
   text-align: right;
-  right: 10px;
-  bottom: 10px;
+  right: 15px;
+  bottom: 15px;
 }
 
 #shortcuts p{
+  font-family: "Futura", sans-serif;
+  font-weight: 100;
+  color: black;
+  font-size: 14px;
   margin-top: 10px;
-  color: #999;
 }

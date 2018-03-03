@@ -78,7 +78,7 @@ Word.prototype.mutate = function(){
   if(this.mutations.length){
     let mutation = this.mutations[floor(random(this.mutations.length))];
     console.log(mutation[0]);
-    let change = " " + this.content + " -> " + mutation[1];
+    let change = " : " + this.content + " &rarr; " + mutation[1];
     logger.child(createP(mutation[0]).child(createSpan(change).style("font-weight", "bold")));
     this.content = mutation[1];
   }

@@ -4,6 +4,11 @@ let islands = [];
 let agents = [];
 let gates = [];
 
+let futura;
+let sourceRegular;
+let sourceLight;
+let sourceExtraLight;
+
 let gui;
 let ctrl;
 
@@ -34,15 +39,9 @@ function Controls(){
   }
 }
 
-//word placeholder
-
 function Gate(){
   this.points = [];
 }
-
-//agent placeholder
-
-//island placeholder
 
 function GridItem(x_, y_, type_, gx_, gy_){
   //item's location on the canvas
@@ -56,11 +55,17 @@ function GridItem(x_, y_, type_, gx_, gy_){
   this.gateTo;
 }
 
+function preload(){
+  futura = loadFont('/styles/Futura.ttf');
+  sourceRegular = loadFont('/styles/SourceSansPro-Regular.ttf');
+  sourceLight = loadFont('/styles/SourceSansPro-Light.ttf');
+  sourceExtraLight = loadFont('/styles/SourceSansPro-ExtraLight.ttf');
+}
+
 function setup(){
   createCanvas(15 * floor(window.innerWidth / 15), 15 * floor(window.innerHeight/15));
   colorMode(HSL);
   noStroke();
-  textFont("Courier New");
 
   logger = createDiv("");
   logger.id("logger");
@@ -126,20 +131,22 @@ function draw(){
   }
 
   if(logging){
-    fill(40);
+    fill(0);
     textStyle(NORMAL);
     textSize(48);
-    text("Remark.", 10, 36);
+    textFont(futura);
+    text("Remark.", 10, 45);
     textSize(18);
-    fill(60);
-    text("A Language Evolution Simulator", 225, 36);
+    fill(40);
+    text("A Language Evolution Simulator", 225, 44);
     for(let i = 0; i < islands.length; i++){
       fill(islands[i].color);
       textSize(28);
       rect(14, 67 + (i * 70), 20, 53);
       fill(40);
       textStyle(NORMAL);
-      text("Language " + i, 39, 85 + (i * 70));
+      textFont(sourceExtraLight);
+      text("Language " + i, 39, 90 + (i * 70));
       textSize(18);
       textStyle(ITALIC);
       let vocabString = "";
@@ -149,7 +156,8 @@ function draw(){
         }
         vocabString += islands[i].vocabulary[j].content;
       }
-      text(vocabString, 39, 110 + (i * 70));
+      textFont(sourceLight);
+      text(vocabString, 39, 115 + (i * 70));
     }
   }
 }
