@@ -56,10 +56,10 @@ function GridItem(x_, y_, type_, gx_, gy_){
 }
 
 function preload(){
-  futura = loadFont('Futura.ttf');
-  sourceRegular = loadFont('SourceSansPro-Regular.ttf');
-  sourceLight = loadFont('SourceSansPro-Light.ttf');
-  sourceExtraLight = loadFont('SourceSansPro-ExtraLight.ttf');
+  futura = loadFont('styles/Futura.ttf');
+  sourceRegular = loadFont('styles/SourceSansPro-Regular.ttf');
+  sourceLight = loadFont('styles/SourceSansPro-Light.ttf');
+  sourceExtraLight = loadFont('styles/SourceSansPro-ExtraLight.ttf');
 }
 
 function setup(){
